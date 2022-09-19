@@ -5,23 +5,49 @@
 To Develop a convolutional deep neural network for digit classification and to verify the response for scanned handwritten images.
 
 ## Problem Statement and Dataset
+The MNIST dataset is a collection of handwritten digits. The task is to classify a given image of a handwritten digit into one of 10 classes representing integer values from 0 to 9, inclusively. The dataset has a collection of 60,000 handwrittend digits of size 28 X 28. Here we build a convolutional neural network model that is able to classify to it's appropriate numerical value.
+![112](https://user-images.githubusercontent.com/75235090/191042148-df16e2a4-ce0e-4ea3-863b-dae598286e34.png)
 
 ## Neural Network Model
 
-Include the neural network model diagram.
+![111](https://user-images.githubusercontent.com/75235090/191042310-ce6d71f4-570f-40d4-ab21-7e1c23022743.png)
 
 ## DESIGN STEPS
 
-### STEP 1:
+## STEP-1:
+Import tensorflow and preprocessing libraries
 
-### STEP 2:
+## STEP 2:
+Download and load the dataset
 
-### STEP 3:
+## STEP 3:
+Scale the dataset between it's min and max values
 
-Write your own steps
+## STEP 4:
+Using one hot encode, encode the categorical values
+
+## STEP-5:
+Split the data into train and test
+
+## STEP-6:
+Build the convolutional neural network model
+
+## STEP-7:
+Train the model with the training data
+
+## STEP-8:
+Plot the performance plot
+
+## STEP-9:
+Evaluate the model with the testing data
+
+## STEP-10:
+Fit the model and predict the single input
+
+
 
 ## PROGRAM
-```python
+```python3
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D
@@ -78,29 +104,28 @@ img_28_gray = tf.image.rgb_to_grayscale(img_28)
 img_28_gray_scaled = img_28_gray.numpy()/255.0
 plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
 np.argmax(model.predict(img_28_gray_scaled.reshape(1,28,28,1)),axis=1)
-
 ```
 
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-### ACCURACY VS VAL_ACCURACY
-![image](https://user-images.githubusercontent.com/75235488/189907130-3c5f18c6-e092-463b-a520-3e3fa0a2859c.png)
-
-
-### TRAINING_LOSS VS VAL_LOSS
-![image](https://user-images.githubusercontent.com/75235488/189906885-b7baf893-874f-464d-9961-0d84304e54c3.png)
+## ACCURACY VS VAL_ACCURACY
+![image](https://user-images.githubusercontent.com/75235090/190903676-0b51e313-f8b0-41a5-9ebd-6f3ae8d71ba6.png)
+## TRAINING_LOSS VS VAL_LOSS 
+![image](https://user-images.githubusercontent.com/75235090/190903768-9e92b42c-b3cc-49e2-8526-0d92f0a6bc24.png)
 
 ### Classification Report
 
-![image](https://user-images.githubusercontent.com/75235488/189907255-1bf07e4b-645d-4643-b9f8-a910dc2ea19b.png)
+![image](https://user-images.githubusercontent.com/75235090/190903638-cd86fa6c-9c30-433e-aa77-9a4a022c9e6d.png)
 
 ### Confusion Matrix
-![image](https://user-images.githubusercontent.com/75235488/189907192-8b5c23c9-27c1-40d3-8499-7bd8091f3c76.png)
+
+![image](https://user-images.githubusercontent.com/75235090/190903605-09122071-80c9-4e51-b057-432a9975d900.png)
 
 ### New Sample Data Prediction
 
-![image](https://user-images.githubusercontent.com/75235488/189907327-69384ddd-16ed-4ba2-95c1-6e99e6dbaf63.png)
+![image](https://user-images.githubusercontent.com/75235090/190903581-a94192f3-af1d-4ca5-ba69-e381a8542f98.png)
+
 
 ## RESULT
 A convolutional deep neural network for digit classification and to verify the response for scanned handwritten images is developed sucessfully.
