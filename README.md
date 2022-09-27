@@ -114,11 +114,11 @@ np.argmax(model.predict(img_28_gray_scaled.reshape(1,28,28,1)),axis=1)
 ## TRAINING_LOSS VS VAL_LOSS 
 ![image](https://user-images.githubusercontent.com/75235090/190903768-9e92b42c-b3cc-49e2-8526-0d92f0a6bc24.png)
 
-### Classification Report
+### Confusion Matrix
 
 ![image](https://user-images.githubusercontent.com/75235090/190903638-cd86fa6c-9c30-433e-aa77-9a4a022c9e6d.png)
 
-### Confusion Matrix
+### Classification report
 
 ![image](https://user-images.githubusercontent.com/75235090/190903605-09122071-80c9-4e51-b057-432a9975d900.png)
 
